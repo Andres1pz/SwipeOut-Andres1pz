@@ -1,29 +1,16 @@
 body {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin: 0%;
+    margin: 0;
     background-color: #1b1b1b;
 }
 
-.header {
-    background-image: url(/fondo.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+/* Navegación */
+nav {
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.formulario-section {
-    display: flex; 
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-}
-.formulario-iframe {
-    width: 600px;
-    height: 100vh
+    background-color: #1b1b1b;
 }
 
 nav ul {
@@ -32,7 +19,6 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -45,20 +31,72 @@ nav ul li a {
     color: #ffffff;
     font-weight: bold;
     font-size: 0.875rem;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #0070f3;
-    transition: 300ms;
 }
-nav {
-    height: 60px;
+
+/* Header */
+.header {
+    background-image: url(/fondo.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #1b1b1b;
     justify-content: center;
 }
-@media (max-width: 10000px) {
+
+/* Sección del formulario */
+.formulario-section {
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Iframe del formulario */
+.formulario-iframe {
+    width: 100%;
+    max-width: 600px; /* ancho máximo en desktop */
+    height: 80vh;
+    border: none;
+}
+
+/* Media query para tablet */
+@media (max-width: 1024px) {
+    .formulario-iframe {
+        max-width: 500px;
+        height: 70vh;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .header {
+        height: 30vh;
+    }
+
+    .formulario-section {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-iframe {
+        max-width: 100%;
+        height: auto;
+        min-height: 500px; /* para que no se vea muy pequeño */
+    }
+
     nav ul li {
         margin: 0 0.5rem;
     }
@@ -66,17 +104,4 @@ nav {
     nav ul li a {
         font-size: 0.75rem;
     }
-    .header {
-        background-image: url(/fondo.png);
-        background-size: cover;
-        background-position: center;
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .formulario-iframe {
-        width: 1200px;
-        height: 100vh
-}
 }
