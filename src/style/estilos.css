@@ -10,7 +10,7 @@ body {
     background-image: url(/fondo.png);
     background-size: cover;
     background-position: center;
-    height: 30vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ nav {
     background-color: #1b1b1b;
     justify-content: center;
 }
-@media (min-width: 800px) {
+@media (max-width: 10000px) {
     nav ul li {
         margin: 0 0.5rem;
     }
@@ -70,7 +70,7 @@ nav {
         background-image: url(/fondo.png);
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        height: 30vh;
         display: flex;
         align-items: center;
         justify-content: center;
